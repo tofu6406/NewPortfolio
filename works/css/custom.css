@@ -1,0 +1,134 @@
+/* CSS */
+
+html, body{
+	width: 100%; height: 100%;
+	background-color: whitesmoke;
+	
+}
+
+#my_key{
+	width: 100%; height: auto;
+	padding: 12rem 0px;
+	/* background-color: black; */
+	background-position: center;
+	/* color: white; */
+}
+
+#my_key h1{
+	margin: 1rem 0px;
+	font-size: 5rem;
+}
+
+#my_key p{
+	margin: 1rem 0px;
+	font-size: 1rem;
+}
+
+
+.navbar-brand {
+	color: black;
+}
+.navbar-dark .navbar-brand {
+	color: black;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: gray;
+}
+.navbar-toggler .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+
+#my_key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+
+.intro-text {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(-200px); /* 上に移動するアニメーション */
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.web-page-info {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.web-page-info.show {
+    opacity: 1;
+    transform: translateY(0); /* 元の位置に戻す */
+}
+
+
+
+
+#animateText{
+	font-size: 20px;
+}
+.text {
+	display: inline-block;
+}
+.char {
+	display: inline-block;
+	transform: translateY(100%);  /* 初期状態では下がって非表示 */
+	opacity: 0;                   /* 非表示 */
+	animation: upDown 5s ease-in-out infinite;
+	animation-delay: calc(0.1s * var(--char-index)); /* 各文字に少しずつ遅延を設定 */
+}
+
+.web-page-info #row img{
+	height: 100px;
+}
+
+
+
+
+
+
+
+/* .web-page-info {
+	width: 200px;
+  	height: 200px;
+  	object-fit: cover;
+  	object-position: top;
+	border-radius: 8px;
+} */
+
+  /* 上下に動かすアニメーション */
+@keyframes upDown {
+	0%, 20% {
+		transform: translateY(100%);  /* 下に位置し、非表示 */
+		opacity: 0;
+	}
+	25%, 75% {
+	  	transform: translateY(0);     /* 上に移動して表示 */
+		opacity: 1;
+	}
+	80%, 100% {
+		transform: translateY(100%);  /* 再び下に移動して非表示 */
+		opacity: 0;
+	}
+}
+.text.is-active .char {
+	--y: 0; /* アクティブ時は元の位置に */
+}
+button {
+	margin-top: 20px;
+}
+
+
