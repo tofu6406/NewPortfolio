@@ -1,9 +1,27 @@
 /* CSS */
 
-html, body{
-	width: 100%; height: 100%;
-	background-color: whitesmoke;
-	
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    margin: 0; /* デフォルトの余白を無効化 */
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* mainをフレックスの残り全体に広げる */
+    height: auto;
+    padding-bottom: 0; /* 余分なスペースを削除 */
+}
+
+footer {
+    flex-shrink: 0; /* footerを最下部に固定 */
+    padding: 20px 0; /* 必要に応じて調整 */
 }
 
 #my_key{
@@ -43,7 +61,6 @@ html, body{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 100vh; */
 }
 
 .intro-text {
@@ -57,7 +74,7 @@ html, body{
     transform: translateY(100px);
 }
 
-.show {
+.intro-text.show {
     opacity: 1;
     transform: translateY(-200px); /* 上に移動するアニメーション */
     transition: transform 1s ease-out, opacity 1s ease-out;
@@ -73,6 +90,7 @@ html, body{
     opacity: 1;
     transform: translateY(0); /* 元の位置に戻す */
 }
+
 
 
 
