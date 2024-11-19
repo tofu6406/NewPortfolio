@@ -9,7 +9,7 @@ $(document).ready(function() {
         
         // 1秒遅らせてwebPageInfoが下から出現する
         setTimeout(function() {
-            $('#webPageInfo').addClass('show'), $('#introText').css('margin-bottom', '-150px');;
+            $('#webPageInfo').addClass('show'), $('#introText').css('margin-bottom', '-150px'), $('main').css('margin-bottom', '-200px');;
         }, 1000); // 1秒遅延
     }, 2500); // 2秒後にworksとanimateTextが上に移動
 });
